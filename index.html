@@ -200,16 +200,16 @@
                         </li>
                     </ul>
                 </div>
-<div class="w-full lg:w-1/2 bg-maroon p-8 md:p-10 text-white flex flex-col justify-center text-center sm:text-left">
-    <h3 class="text-2xl md:text-3xl font-bold mb-6 text-tala-orange">A Note from the Founder</h3>
-    <p class="text-base md:text-lg leading-relaxed font-light mb-4 text-gray-200">
-        "Hi, I'm Rishi. I've always believed deeply in the magic of making things with your own hands, sharing stories, and gathering communities together in beautiful, intentional spaces."
-    </p>
-    <p class="text-base md:text-lg leading-relaxed font-light mb-6 text-gray-200">
-        "Roots & Tales was born out of a desire to give our children a place to experience that same tactile, screen-free joy. We wanted to create a world where they can reconnect with their roots, play freely, and discover the pure wonder of our culture."
-    </p>
-    <p class="font-bold text-tala-orange text-lg">— Rishi</p>
-</div>
+                <div class="w-full lg:w-1/2 bg-maroon p-8 md:p-10 text-white flex flex-col justify-center text-center sm:text-left">
+                    <h3 class="text-2xl md:text-3xl font-bold mb-6 text-tala-orange">A Note from the Founder</h3>
+                    <p class="text-base md:text-lg leading-relaxed font-light mb-4 text-gray-200">
+                        "Hi, I'm Rishi. I've always believed deeply in the magic of making things with your own hands, sharing stories, and gathering communities together in beautiful, intentional spaces."
+                    </p>
+                    <p class="text-base md:text-lg leading-relaxed font-light mb-6 text-gray-200">
+                        "Roots & Tales was born out of a desire to give our children a place to experience that same tactile, screen-free joy. We wanted to create a world where they can reconnect with their roots, play freely, and discover the pure wonder of our culture."
+                    </p>
+                    <p class="font-bold text-tala-orange text-lg">— Rishi</p>
+                </div>
             </div>
         </div>
     </section>
@@ -265,32 +265,47 @@
             <h2 class="text-4xl md:text-5xl mb-4">Ready to begin the adventure?</h2>
             <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto font-light">Spaces for our inaugural Hyderabad camp are highly limited to ensure every child gets the attention they deserve.</p>
             
-            <form class="max-w-md mx-auto bg-white p-6 md:p-8 rounded-3xl shadow-2xl text-left">
+            <form id="waitlist-form" class="max-w-md mx-auto bg-white p-6 md:p-8 rounded-3xl shadow-2xl text-left">
                 <div class="mb-4">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Parent's Name</label>
-                    <input class="shadow appearance-none border rounded-xl w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-tala-green" id="name" type="text" placeholder="Your Name">
+                    <input class="shadow appearance-none border rounded-xl w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-tala-green" id="name" name="name" type="text" placeholder="Your Name" required>
                 </div>
+                
                 <div class="mb-4">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email Address</label>
-                    <input class="shadow appearance-none border rounded-xl w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-tala-green" id="email" type="email" placeholder="hello@rootsntales.com">
+                    <input class="shadow appearance-none border rounded-xl w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-tala-green" id="email" name="email" type="email" placeholder="hello@rootsntales.com" required>
                 </div>
+
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="whatsapp">WhatsApp Number</label>
+                    <input class="shadow appearance-none border rounded-xl w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-tala-green" id="whatsapp" name="whatsapp" type="tel" placeholder="+91 98765 43210" required>
+                </div>
+
                 <div class="mb-6">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="age">Child's Age</label>
                     <div class="relative">
-                        <select class="block appearance-none border shadow rounded-xl w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-tala-green bg-white" id="age">
-                            <option>Select age (5-12)</option>
-                            <option>5-7 years</option>
-                            <option>8-10 years</option>
-                            <option>11-12 years</option>
+                        <select class="block appearance-none border shadow rounded-xl w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-tala-green bg-white" id="age" name="age" required>
+                            <option value="">Select age (5-12)</option>
+                            <option value="5-7 years">5-7 years</option>
+                            <option value="8-10 years">8-10 years</option>
+                            <option value="11-12 years">11-12 years</option>
                         </select>
                         <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-700">
                             <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
                         </div>
                     </div>
                 </div>
-                <button class="w-full bg-tala-orange hover:bg-orange-600 text-white font-bold py-4 px-4 rounded-xl transition shadow-lg text-lg" type="button">
+                
+                <button id="submit-btn" class="w-full bg-tala-orange hover:bg-orange-600 text-white font-bold py-4 px-4 rounded-xl transition shadow-lg text-lg" type="submit">
                     Join the Waitlist
                 </button>
+
+                <p id="success-msg" class="text-tala-green font-bold text-center mt-4 hidden">
+                    🎉 Thank you! You're on the waitlist.
+                </p>
+                <p id="error-msg" class="text-red-500 font-bold text-center mt-4 hidden">
+                    Oops! Something went wrong. Please try again.
+                </p>
             </form>
         </div>
     </section>
@@ -318,20 +333,65 @@
     </a>
 
     <script>
+        // --- Mobile Menu Logic ---
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         const mobileLinks = document.querySelectorAll('.mobile-link');
 
-        // Toggle menu
         mobileMenuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Close menu when a link is clicked
         mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
             });
+        });
+
+        // --- Google Sheets Form Submission Logic ---
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyWg-X02vsY5PovknjxuIv3AIqBk5blNSAg055FxTC6FNBjmuywlfoyK9bkNK-OlJW5CA/exec';
+        const form = document.getElementById('waitlist-form');
+        const submitBtn = document.getElementById('submit-btn');
+        const successMsg = document.getElementById('success-msg');
+        const errorMsg = document.getElementById('error-msg');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            
+            // Change button text to show loading state
+            submitBtn.innerHTML = 'Submitting...';
+            submitBtn.disabled = true;
+            submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
+            
+            // Hide messages
+            successMsg.classList.add('hidden');
+            errorMsg.classList.add('hidden');
+
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    // Show success message
+                    successMsg.classList.remove('hidden');
+                    // Reset form
+                    form.reset();
+                    // Reset button
+                    submitBtn.innerHTML = 'Join the Waitlist';
+                    submitBtn.disabled = false;
+                    submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
+                    
+                    // Hide success message after 5 seconds
+                    setTimeout(() => {
+                        successMsg.classList.add('hidden');
+                    }, 5000);
+                })
+                .catch(error => {
+                    console.error('Error!', error.message);
+                    // Show error message
+                    errorMsg.classList.remove('hidden');
+                    // Reset button
+                    submitBtn.innerHTML = 'Join the Waitlist';
+                    submitBtn.disabled = false;
+                    submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
+                });
         });
     </script>
 </body>
