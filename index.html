@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roots & Tales | A Cultural Discovery Experience</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700&display=swap');
+        
+        body { 
+            font-family: 'Nunito', sans-serif; 
+            background-color: #FDFBF7; /* Warm Beige */
+            color: #333333;
+        }
+        
+        h1, h2, h3, .brand-font { 
+            font-family: 'Fredoka One', cursive; 
+        }
+        
+        /* Brand Colors */
+        .text-maroon { color: #5B2333; }
+        .bg-maroon { background-color: #5B2333; }
+        .text-tala-green { color: #4CAF50; }
+        .bg-tala-green { background-color: #4CAF50; }
+        .text-tala-orange { color: #FF9800; }
+        .bg-tala-orange { background-color: #FF9800; }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero-pattern {
+            background-color: #FDFBF7;
+            background-image: radial-gradient(#FF9800 0.5px, transparent 0.5px), radial-gradient(#FF9800 0.5px, #FDFBF7 0.5px);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+        }
+    </style>
+</head>
+<body class="antialiased scroll-smooth">
+
+    <nav class="fixed w-full z-50 bg-[#FDFBF7]/95 backdrop-blur-md border-b border-gray-200">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl md:text-3xl brand-font text-maroon tracking-wide z-50">ROOTS & TALES</div>
+            
+            <div class="hidden lg:flex space-x-6 xl:space-x-8 text-base xl:text-lg font-semibold text-gray-700 items-center">
+                <a href="#about" class="hover:text-tala-orange transition">Our Story</a>
+                <a href="#zones" class="hover:text-tala-orange transition">The Experience</a>
+                <a href="#details" class="hover:text-tala-orange transition">Camp Details</a>
+                <a href="#how-it-works" class="hover:text-tala-orange transition">How It Works</a>
+                <a href="#register" class="bg-tala-orange text-white font-bold py-2 px-6 rounded-full hover:bg-orange-600 transition shadow-md">Join the Waitlist</a>
+            </div>
+
+            <button id="mobile-menu-btn" class="lg:hidden text-maroon focus:outline-none z-50">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 w-full bg-[#FDFBF7] border-b border-gray-200 shadow-xl transition-all duration-300">
+            <div class="flex flex-col px-6 py-6 space-y-6 text-center text-lg font-semibold text-gray-700">
+                <a href="#about" class="mobile-link hover:text-tala-orange transition">Our Story</a>
+                <a href="#zones" class="mobile-link hover:text-tala-orange transition">The Experience</a>
+                <a href="#details" class="mobile-link hover:text-tala-orange transition">Camp Details</a>
+                <a href="#how-it-works" class="mobile-link hover:text-tala-orange transition">How It Works</a>
+                <a href="#register" class="mobile-link inline-block bg-tala-orange text-white font-bold py-3 px-6 rounded-full hover:bg-orange-600 transition shadow-md mt-4">Join the Waitlist</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-pattern pt-32 pb-16 md:pt-40 md:pb-28 border-b border-gray-200">
+        <div class="container mx-auto px-6 text-center">
+            <span class="inline-block py-1 px-3 rounded-full bg-yellow-100 text-yellow-800 font-bold text-xs md:text-sm mb-6 border border-yellow-300">🌿 Coming to Hyderabad this Summer</span>
+            <h1 class="text-4xl md:text-6xl lg:text-7xl text-maroon mb-6 leading-tight max-w-4xl mx-auto">
+                Give your child a summer they will never forget.
+            </h1>
+            <p class="text-lg md:text-2xl text-gray-700 mb-10 max-w-2xl mx-auto font-medium px-2">
+                A cultural discovery experience for children <span class="text-sm align-super">[cite: 2]</span> exploring stories, creativity, traditions & imagination. <span class="text-sm align-super">[cite: 3]</span>
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4 px-4">
+                <a href="#register" class="bg-maroon text-white font-bold text-lg py-4 px-8 rounded-full hover:bg-[#4a1c29] transition shadow-lg w-full sm:w-auto">Reserve a Spot</a>
+                <a href="#how-it-works" class="bg-white text-maroon font-bold text-lg py-4 px-8 rounded-full hover:bg-gray-50 border-2 border-maroon transition shadow-md w-full sm:w-auto">See How It Works</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-16 md:py-20 bg-maroon text-white">
+        <div class="container mx-auto px-6 max-w-4xl text-center">
+            <h2 class="text-3xl md:text-4xl text-tala-orange mb-8">Something got lost between then and now.</h2>
+            <p class="text-lg md:text-xl mb-6 leading-relaxed font-light">
+                Do you remember the summer holidays when you were a child? The stories told under the mango tree. The games nobody taught you—somebody's older cousin just showed you one afternoon and suddenly the whole street was playing.
+            </p>
+            <p class="text-lg md:text-xl mb-6 leading-relaxed font-light">
+                Children today grow up with screens but less connection to stories, creativity, and culture. <span class="text-sm align-super">[cite: 7]</span> We believe screens are not the enemy, but they are not enough.
+            </p>
+            <p class="text-xl md:text-2xl font-semibold text-tala-green">
+                We are not here to bring back the past. We are here to give your child the feeling of it.
+            </p>
+        </div>
+    </section>
+
+    <section class="py-16 md:py-20 bg-white overflow-hidden">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+            <div class="w-full md:w-1/2 flex justify-center relative px-4">
+                <div class="absolute inset-0 bg-tala-green opacity-10 rounded-full transform scale-110 md:scale-125"></div>
+                <img src="https://placehold.co/500x600/FDFBF7/4CAF50?text=Insert+Tala+Mascot+Here" alt="Tala Mascot" class="rounded-2xl shadow-2xl border-4 md:border-8 border-white relative z-10 w-full max-w-[350px] md:max-w-none">
+            </div>
+            <div class="w-full md:w-1/2 text-center md:text-left">
+                <h2 class="text-4xl md:text-5xl text-tala-green mb-6">Meet Tala</h2>
+                <p class="text-lg md:text-xl text-gray-700 mb-6">Tala lives in the magical Roots & Tales tree. <span class="text-sm align-super">[cite: 25]</span> Tala loves stories, music, art, and adventure. <span class="text-sm align-super">[cite: 26, 27]</span></p>
+                <p class="text-lg md:text-xl text-gray-700 mb-8">Whenever children visit Roots & Tales, Tala guides them through a world of discovery. <span class="text-sm align-super">[cite: 28, 29]</span> Instead of lectures, children experience culture through hands-on activities. <span class="text-sm align-super">[cite: 14]</span></p>
+                <div class="inline-block p-4 md:p-6 bg-yellow-100 rounded-xl border-l-4 border-tala-orange text-left w-full md:w-auto">
+                    <p class="font-bold text-maroon text-xl md:text-2xl brand-font">Every child becomes a Roots & Tales Explorer <span class="text-sm align-super">[cite: 30]</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="zones" class="py-16 md:py-24 bg-gray-50 border-t border-b border-gray-200">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl text-center text-maroon mb-4">Five Worlds. One Adventure.</h2>
+            <p class="text-center text-lg md:text-xl text-gray-600 mb-12 max-w-2xl mx-auto">Roots & Tales is designed as an interactive experience space. <span class="text-sm align-super">[cite: 32]</span> Children rotate through activity zones guided by Tala. <span class="text-sm align-super">[cite: 33]</span></p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                <div class="bg-white p-6 md:p-8 rounded-2xl shadow-md border-t-8 border-tala-green card-hover text-center sm:text-left">
+                    <div class="text-4xl md:text-5xl mb-4">📖</div>
+                    <h3 class="text-xl md:text-2xl text-maroon mb-2">Tala's Story Circle <span class="text-sm align-super">[cite: 42]</span></h3>
+                    <p class="text-gray-600 font-semibold mb-2 text-sm md:text-base">Storytelling and imagination <span class="text-sm align-super">[cite: 43]</span></p>
+                    <p class="text-gray-500 text-sm leading-relaxed hidden sm:block">Where they don't just listen to folk tales—they become part of them. They tell stories, create characters, and discover the power of imagination.</p>
+                </div>
+
+                <div class="bg-white p-6 md:p-8 rounded-2xl shadow-md border-t-8 border-tala-orange card-hover text-center sm:text-left">
+                    <div class="text-4xl md:text-5xl mb-4">🎨</div>
+                    <h3 class="text-xl md:text-2xl text-maroon mb-2">Tala's Art Grove <span class="text-sm align-super">[cite: 45]</span></h3>
+                    <p class="text-gray-600 font-semibold mb-2 text-sm md:text-base">Painting, clay craft, creative making <span class="text-sm align-super">[cite: 46]</span></p>
+                    <p class="text-gray-500 text-sm leading-relaxed hidden sm:block">No screens. No instructions. Just hands, color, and imagination. Children work with their hands to make something real they can take home.</p>
+                </div>
+
+                <div class="bg-white p-6 md:p-8 rounded-2xl shadow-md border-t-8 border-maroon card-hover text-center sm:text-left">
+                    <div class="text-4xl md:text-5xl mb-4">🥁</div>
+                    <h3 class="text-xl md:text-2xl text-maroon mb-2">Tala's Rhythm Garden <span class="text-sm align-super">[cite: 47]</span></h3>
+                    <p class="text-gray-600 font-semibold mb-2 text-sm md:text-base">Music, singing and dance <span class="text-sm align-super">[cite: 47]</span></p>
+                    <p class="text-gray-500 text-sm leading-relaxed hidden sm:block">Music experienced with the whole body. Clapping, singing, moving, and feeling the rhythm of something ancient and alive.</p>
+                </div>
+
+                <div class="bg-white p-6 md:p-8 rounded-2xl shadow-md border-t-8 border-blue-400 card-hover text-center sm:text-left">
+                    <div class="text-4xl md:text-5xl mb-4">🪁</div>
+                    <h3 class="text-xl md:text-2xl text-maroon mb-2">Tala's Play Yard <span class="text-sm align-super">[cite: 48]</span></h3>
+                    <p class="text-gray-600 font-semibold mb-2 text-sm md:text-base">Traditional games & team play <span class="text-sm align-super">[cite: 48]</span></p>
+                    <p class="text-gray-500 text-sm leading-relaxed hidden sm:block">Gilli-Danda, Lagori, Kho-Kho. Games your parents played. Games that don't need a controller or WiFi.</p>
+                </div>
+
+                <div class="bg-white p-6 md:p-8 rounded-2xl shadow-md border-t-8 border-green-600 card-hover text-center sm:text-left sm:col-span-2 lg:col-span-1">
+                    <div class="text-4xl md:text-5xl mb-4">🌱</div>
+                    <h3 class="text-xl md:text-2xl text-maroon mb-2">Tala's Nature Patch <span class="text-sm align-super">[cite: 49]</span></h3>
+                    <p class="text-gray-600 font-semibold mb-2 text-sm md:text-base">Planting, nature crafts & discovery <span class="text-sm align-super">[cite: 50]</span></p>
+                    <p class="text-gray-500 text-sm leading-relaxed hidden sm:block">Reconnecting with the earth. Planting seeds, observing nature, and finding wonder in the world outside the apartment window.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="details" class="py-16 md:py-20 bg-white">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div class="flex flex-col lg:flex-row bg-[#FDFBF7] rounded-3xl overflow-hidden shadow-lg border border-gray-200">
+                <div class="w-full lg:w-1/2 p-8 md:p-10 flex flex-col justify-center">
+                    <h2 class="text-3xl md:text-4xl text-maroon mb-8 text-center md:text-left">Camp Format</h2>
+                    <ul class="space-y-6 md:space-y-8">
+                        <li class="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left">
+                            <span class="text-4xl mb-2 sm:mb-0 sm:mr-5">⏱️</span>
+                            <div>
+                                <p class="text-gray-500 text-xs font-bold uppercase tracking-wider">Duration</p>
+                                <p class="text-xl font-semibold text-gray-800">3-4 hours <span class="text-sm align-super">[cite: 52]</span></p>
+                                <p class="text-gray-600 text-sm mt-1">Each activity lasts 20-25 minutes. <span class="text-sm align-super">[cite: 63]</span></p>
+                            </div>
+                        </li>
+                        <li class="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left">
+                            <span class="text-4xl mb-2 sm:mb-0 sm:mr-5">👧🏽</span>
+                            <div>
+                                <p class="text-gray-500 text-xs font-bold uppercase tracking-wider">Primary Audience</p>
+                                <p class="text-xl font-semibold text-gray-800">Children aged 5–12 years <span class="text-sm align-super">[cite: 65, 66]</span></p>
+                                <p class="text-gray-600 text-sm mt-1">Highly curious <span class="text-sm align-super">[cite: 67]</span>, enjoy creative play <span class="text-sm align-super">[cite: 68, 69]</span>, ideal stage for cultural exposure. <span class="text-sm align-super">[cite: 70, 71]</span> Parents can attend as observers. <span class="text-sm align-super">[cite: 72, 73]</span></p>
+                            </div>
+                        </li>
+                        <li class="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left">
+                            <span class="text-4xl mb-2 sm:mb-0 sm:mr-5">📍</span>
+                            <div>
+                                <p class="text-gray-500 text-xs font-bold uppercase tracking-wider">Location</p>
+                                <p class="text-xl font-semibold text-gray-800">Hyderabad</p>
+                                <p class="text-gray-600 text-sm mt-1">Weekend pop-ups across premium city venues.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-full lg:w-1/2 bg-maroon p-8 md:p-10 text-white flex flex-col justify-center text-center sm:text-left">
+                    <h3 class="text-2xl md:text-3xl font-bold mb-6 text-tala-orange">A Note from the Founder</h3>
+                    <p class="text-base md:text-lg leading-relaxed font-light mb-4 text-gray-200">
+                        "Hi, I'm Saikrishna. When I'm not working in tech, my hands are usually covered in clay making trays and bracelets for my brand Terrai, or I'm neck-deep in designing DIY decor for family weddings right here in Hyderabad."
+                    </p>
+                    <p class="text-base md:text-lg leading-relaxed font-light mb-6 text-gray-200">
+                        "I believe deeply in the magic of making things with your own hands and gathering communities together. Roots & Tales was born out of a desire to give our children that same tactile, screen-free joy."
+                    </p>
+                    <p class="font-bold text-tala-orange text-lg">— Saikrishna Kotnala</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="py-16 md:py-24 bg-yellow-50 border-t border-gray-200">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl text-maroon mb-4">How It Works</h2>
+                <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">A seamless, stress-free process for parents. A magical, unforgettable day for your child.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+                <div class="hidden lg:block absolute top-12 left-0 w-full h-1 bg-tala-orange opacity-30 z-0"></div>
+
+                <div class="relative z-10 flex flex-col items-center text-center">
+                    <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center shadow-lg border-4 border-tala-orange mb-6 text-3xl font-bold text-tala-orange">1</div>
+                    <h3 class="text-xl font-bold text-maroon mb-3">Secure a Spot</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Book a weekend slot in Hyderabad. Groups are kept small to ensure every child gets personal attention.</p>
+                </div>
+
+                <div class="relative z-10 flex flex-col items-center text-center mt-8 lg:mt-0">
+                    <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center shadow-lg border-4 border-tala-green mb-6 text-3xl font-bold text-tala-green">2</div>
+                    <h3 class="text-xl font-bold text-maroon mb-3">Enter Tala's World</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Drop your child off at our immersive venue. They’ll be welcomed by our facilitators and introduced to Tala's magical universe.</p>
+                </div>
+
+                <div class="relative z-10 flex flex-col items-center text-center mt-8 lg:mt-0">
+                    <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center shadow-lg border-4 border-blue-400 mb-6 text-3xl font-bold text-blue-400">3</div>
+                    <h3 class="text-xl font-bold text-maroon mb-3">The 5-Zone Journey</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Children rotate through our 5 interactive zones in small groups. Each activity lasts an engaging 20-25 minutes.</p>
+                </div>
+
+                <div class="relative z-10 flex flex-col items-center text-center mt-8 lg:mt-0">
+                    <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center shadow-lg border-4 border-maroon mb-6 text-3xl font-bold text-maroon">4</div>
+                    <h3 class="text-xl font-bold text-maroon mb-3">Take the Magic Home</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Pick up a child who is full of stories, carrying handmade crafts, and eager to show you the new games they learned.</p>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <a href="#register" class="inline-block bg-white text-maroon font-bold text-lg py-4 px-10 rounded-full border-2 border-maroon hover:bg-maroon hover:text-white transition shadow-md">
+                    Check Availability
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="register" class="py-16 md:py-24 bg-tala-green text-white text-center relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-64 h-64 bg-white opacity-10 rounded-full -translate-x-1/2 -translate-y-1/2 hidden md:block"></div>
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-tala-orange opacity-20 rounded-full translate-x-1/3 translate-y-1/3 hidden md:block"></div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <h2 class="text-4xl md:text-5xl mb-4">Ready to begin the adventure?</h2>
+            <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto font-light">Spaces for our inaugural Hyderabad camp are highly limited to ensure every child gets the attention they deserve.</p>
+            
+            <form class="max-w-md mx-auto bg-white p-6 md:p-8 rounded-3xl shadow-2xl text-left">
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Parent's Name</label>
+                    <input class="shadow appearance-none border rounded-xl w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-tala-green" id="name" type="text" placeholder="Your Name">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email Address</label>
+                    <input class="shadow appearance-none border rounded-xl w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-tala-green" id="email" type="email" placeholder="hello@rootsntales.com">
+                </div>
+                <div class="mb-6">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="age">Child's Age</label>
+                    <div class="relative">
+                        <select class="block appearance-none border shadow rounded-xl w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-tala-green bg-white" id="age">
+                            <option>Select age (5-12)</option>
+                            <option>5-7 years</option>
+                            <option>8-10 years</option>
+                            <option>11-12 years</option>
+                        </select>
+                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-700">
+                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <button class="w-full bg-tala-orange hover:bg-orange-600 text-white font-bold py-4 px-4 rounded-xl transition shadow-lg text-lg" type="button">
+                    Join the Waitlist
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-400 py-12 text-center border-t-8 border-maroon">
+        <div class="container mx-auto px-6">
+            <div class="text-2xl md:text-3xl brand-font text-white tracking-wide mb-6">ROOTS & TALES</div>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-8 mb-8 text-sm md:text-base">
+                <a href="#" class="hover:text-white transition">Instagram</a>
+                <a href="#" class="hover:text-white transition">WhatsApp</a>
+                <a href="mailto:hello@rootsntales.com" class="hover:text-white transition">hello@rootsntales.com</a>
+            </div>
+            <p class="text-sm">Presented by The Cultureverse & Co</p>
+            <p class="mt-4 text-xs opacity-60">&copy; 2026 Roots & Tales. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        // Toggle menu
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close menu when a link is clicked
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
